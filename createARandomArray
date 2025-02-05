@@ -1,0 +1,10 @@
+//the code that creates a random Array
+public static int[] createARandomArray(int size){
+    int[] array = new int[size];
+    Random rand = new Random();
+    for(int i = 0; i < size; i++){
+        array[i] = rand.nextInt(1,100);
+        System.out.print(array[i] + " ");
+    }
+    return array;
+}
