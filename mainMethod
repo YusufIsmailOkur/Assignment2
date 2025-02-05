@@ -1,0 +1,10 @@
+// the main method
+public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Please enter the size of the array: ");
+        int size = in.nextInt();
+        int[] array = createARandomArray(size);
+        System.out.println("\nThe average of this array is: "+ findAverage(array) + "\nThe difference between every elements are: ");
+        findDifference(array);
+        System.out.println("\nThe sum of even indexes are: " + sumOfEven(array) + " and the sum of odd indexes are: " + sumOfOdd(array));
+    }
