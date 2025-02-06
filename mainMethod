@@ -4,7 +4,31 @@ public static void main(String[] args) {
         System.out.println("Please enter the size of the array: ");
         int size = in.nextInt();
         int[] array = createARandomArray(size);
-        System.out.println("\nThe average of this array is: "+ findAverage(array) + "\nThe difference between every elements are: ");
-        findDifference(array);
-        System.out.println("\nThe sum of even indexes are: " + sumOfEven(array) + " and the sum of odd indexes are: " + sumOfOdd(array));
+        boolean goOn = true;
+        do{
+            System.out.println("\nPick the operation you want to do: \n1: Find the average of array and how each element differs from the average.\n2: Find the minimum of array.\n3: Find the maximum of array.\n4: Find the sum of even indexes.\n5: Find the sum of odd indexes.\n6: Exit");
+            int choice = in.nextInt();
+            switch(choice){
+            case 1:
+                System.out.println("\nThe average of this array is: "+ findAverage(array) + "\nThe difference between every elements are: ");
+                findDifference(array);
+                break;
+            case 2:
+                findMinimum(array);
+                break;
+            case 3:
+                findMaximum(array);
+                break;
+            case 4:
+                System.out.println("The sum of even indexes are: " + sumOfEven(array));
+                break;
+            case 5:
+                System.out.println("The sum of odd indexes are: " + sumOfOdd(array));
+                break;
+            case 6:
+                goOn = false;
+                System.out.println("Exited succesfully!");
+                break;
+            }
+        } while(goOn);
     }
